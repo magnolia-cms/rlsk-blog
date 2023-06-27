@@ -1,0 +1,18 @@
+label: Page
+form:
+    properties:
+        - name: title
+          label: Title
+          $type: textField
+          i18n: true
+        - name: description
+          label: Description
+          $type: richTextField
+          i18n: true
+        - name: publish_date
+          label: Publish Date
+          $type: dateField
+        - image:
+          label: Banner Image
+          $type: damLinkField
+

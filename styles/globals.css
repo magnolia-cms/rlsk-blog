@@ -37,6 +37,10 @@ img {
   width: 100%;
 }
 
+.page-container {
+  width: 100%;
+}
+
 .isMagnoliaEdit a {
   pointer-events: none;
 }
@@ -226,18 +230,6 @@ header .PageLink {
   font: inherit;
   font-size: inherit;
   appearance: none;
-}
-
-/* footer */
-footer {
-  margin-top: 4em;
-  margin-bottom: 4em;
-  margin-left: 32px;
-  margin-right: 32px;
-}
-
-.footer-column  h3{
-margin-bottom: 1em;
 }
 
 /* main */
@@ -1249,3 +1241,42 @@ input {
 label {
   padding-right: 10px;
 }
+
+
+/*
+
+footer
+
+*/
+
+footer {
+	background-color: #000000;
+	padding: 100px;
+}
+
+.footer-columns {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.footer-column {
+	flex-basis: 30%;
+}
+
+.footer-column h3 {
+	color: #fff;
+	font-size: 32px;
+	margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-column p,
+.footer-column a {
+	color: #fff;
+	font-size: 32px;
+}
+
