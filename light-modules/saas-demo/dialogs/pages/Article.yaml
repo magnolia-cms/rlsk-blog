@@ -12,7 +12,7 @@ form:
         - name: publish_date
           label: Publish Date
           $type: dateField
-        - image:
+        - name: banner_image
           label: Banner Image
           $type: damLinkField
 
