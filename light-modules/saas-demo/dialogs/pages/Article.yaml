@@ -3,7 +3,7 @@ form:
     properties:
         - name: title
           label: Title
-          $type: textField
+          $type: richTextField
           i18n: true
         - name: description
           label: Description
