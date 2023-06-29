@@ -27,3 +27,9 @@ references:
           targetWorkspace: watches
           expand: true
           generateLink: true
+
+
+    - name: imageReference
+      propertyName: banner_image
+      referenceResolver:
+          $type: assetReferenceResolver
