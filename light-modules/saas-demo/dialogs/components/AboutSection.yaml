@@ -1,0 +1,27 @@
+label: About Rasmus
+form:
+    $type: tabbedForm
+    tabs:
+        firstTab:
+            label: Main
+            fields: 
+                title:
+                    label: Title
+                    $type: textField
+                    i18n: true
+                text:
+                    label: Text
+                    $type: richTextField
+                    i18n: true
+                image:
+                    label: Image
+                    $type: damLinkField
+        secondTab:
+            label: CTA
+            fields:
+                pageLink:
+                    label: Page Link
+                    $type: pageNorsuLinkField
+                ctaTitle:
+                    label: Title
+                    $type: textField
