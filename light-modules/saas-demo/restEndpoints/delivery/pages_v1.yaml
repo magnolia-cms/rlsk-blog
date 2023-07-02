@@ -1,5 +1,7 @@
 $type: pagesDeliveryEndpoint_v2
 referenceDepth: 2
+sortBy:
+  mgnl:lastModified: ascending
 
 references:
     - name: imageReference
