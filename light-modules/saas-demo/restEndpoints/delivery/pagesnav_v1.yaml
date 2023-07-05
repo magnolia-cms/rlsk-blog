@@ -1,6 +1,6 @@
 class: info.magnolia.rest.delivery.norsu.NorsuDeliveryEndpointDefinition
 workspace: website
-depth: 2
+depth: 3
 includeSystemProperties: false
 bypassWorkspaceAcls: true
 limit: 50
