@@ -1,11 +1,11 @@
 baseUrl: http://localhost:3000
 class: info.magnolia.rendering.spa.renderer.SpaRenderableDefinition
-dialog: saas-demo:pages/Home
+dialog: saas-demo:pages/About
 renderType: spa
 # routeTemplate: '/{{@path}}'
 routeTemplate: '/api/preview?slug=/{{@path}}'
 
-title: Magnetic - Basic
+title: Magnetic - About
 areas:
     main:
         title: Main Area
