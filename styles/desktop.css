@@ -1,3 +1,9 @@
+@media only screen and (min-width: 480px) {
+	.About__container {
+		flex-direction: row;
+	  }
+}
+
 @media only screen and (min-width: 1024px) {
 	body {
 	  font-size: 18px;
@@ -51,7 +57,7 @@
 	}
   
 	.Card__info {
-	  padding: 3rem;
+	  padding: 1rem 0;
 	  margin-bottom: 1rem;
 	}
   
@@ -60,7 +66,7 @@
 	}
   
 	.Quote-wrapper {
-	  padding: 10vh;
+	  padding: 2rem 8rem;
 	}
   
 	.ConversationalForm__question {
@@ -72,4 +78,8 @@
 	  width: 10rem;
 	  margin: 0 1rem 0 0;
 	}
+
+	.About__container {
+		flex-direction: row;
+	  }
   }

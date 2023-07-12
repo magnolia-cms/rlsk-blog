@@ -1,11 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import { EditableArea, EditableComponent } from '@magnolia/react-editor';
-import A from '../../components/A';
-import Img from '../../components/Img';
 import { useEffect } from 'react';
-import Image from 'next/image';
 import Footer from '../components/Footer';
+import Grid from '../components/Grid';
 
 export function renderHomeHeader(props: any) {
 	const { content } = props;
@@ -26,6 +24,7 @@ export function renderHomeHeader(props: any) {
 				)}
 			</div>
 
+
 			<nav>
 				<ul className="nav-links">
 					{content['@nodes'].map((nodeName: any) => (
@@ -42,7 +41,7 @@ export function renderHomeHeader(props: any) {
 }
 
 export default function Home(props: any) {
-	const { main, header } = props;
+	const { main, header, nodes } = props;
 
 	useEffect(() => {
 		sessionStorage.setItem('header', JSON.stringify(header));
@@ -51,15 +50,21 @@ export default function Home(props: any) {
 	return (
 		<>
 			<main>
+
 				{header && (
 					<EditableArea
 						content={header}
 						customView={renderHomeHeader}
 					/>
 				)}
-
-				{main && <EditableArea content={main} />}
+				<div className="flex-center">
+					<div className="page-container">
+						{main && <EditableArea content={main} />}
+						<Grid />
+					</div>
+				</div>
 				<Footer />
+
 			</main>
 		</>
 	);

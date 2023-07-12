@@ -1,11 +1,16 @@
 import Image from 'next/image';
 
 function renderText(createdAt, name) {
+
+
+
 	return createdAt || name ? (
-		<div className="col-6 TextImage__text">
-			{name && <div className="Story__author">{name}</div>}
+		<div className='thumbnail-text'>
+			{name && <p >{name}</p>}
 			{createdAt && (
-				<div className="Story__image">{createdAt}</div>
+					<div>
+					{new Date(createdAt).toLocaleDateString('en-GB')}
+				</div>
 			)}
 		</div>
 	) : null;
@@ -13,18 +18,13 @@ function renderText(createdAt, name) {
 
 function renderImage() {
 	return (
-		<div className="col-2">
+		<div className="col-5">
 			<Image
 				src="/rasmus.svg" // Route of the image file
 				height={80} // Desired size with correct aspect ratio
 				width={80} // Desired size with correct aspect ratio
 				alt="rasmus"
 			/>
-			{/* <Img
-				className="TextImage__image"
-				image={image}
-				withCaption={false}
-			/> */}
 		</div>
 	);
 }
@@ -33,13 +33,10 @@ function AuthorThumbnail(props) {
 	const { name, createdAt } = props;
 
 	return (
-		<div className="TextImage">
-			<div className="row-center">
-				<>
+		<div >
+			<div className='thumbnail-wrapper'>
 					{renderImage()}
 					{renderText(createdAt, name)}
-				</>
-
 			</div>
 		</div>
 	);

@@ -1,5 +1,6 @@
 import Home from "./templates/pages/Home";
 import Basic from "./templates/pages/Basic";
+import About from "./templates/pages/About";
 import Section from "./templates/components/Section";
 import Carousel from "./templates/components/Carousel";
 import Banner from "./templates/components/Banner";
@@ -10,12 +11,13 @@ import Quote from "./templates/components/Quote";
 import Map from "./templates/components/Map";
 import Link from "./templates/components/Link";
 import ContactForm from "./templates/components/ContactForm";
-import Watch from "./templates/components/Watch";
+import AboutSection from "./templates/components/AboutSection";
 
 export const config = {
   componentMappings: {
     "saas-demo:pages/Home": Home,
     "saas-demo:pages/Basic": Basic,
+    "saas-demo:pages/About": About,
 
     "saas-demo:components/Section": Section,
     "saas-demo:components/Carousel": Carousel,
@@ -27,6 +29,6 @@ export const config = {
     "saas-demo:components/Map": Map,
     "saas-demo:components/Link": Link,
     "saas-demo:components/ContactForm": ContactForm,
-    "saas-demo:components/Watch": Watch,
+    "saas-demo:components/AboutSection": AboutSection,
   },
 };

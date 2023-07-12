@@ -1,11 +1,11 @@
 import A from "./A";
 
 function CTA(props) {
-  const { ctaTitle, pageLink, webLink } = props;
+  const { ctaTitle, pageLink, webLink, className } = props;
 
   return ctaTitle && (pageLink || webLink) ? (
     <A
-      className="btn-blue"
+      className={className}
       href={pageLink ? pageLink["@path"] : webLink}
       label={ctaTitle}
     />
