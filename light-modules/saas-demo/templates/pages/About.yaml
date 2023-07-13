@@ -1,4 +1,4 @@
-baseUrl: http://localhost:3000
+baseUrl: https://rlsk-blog.netlify.app
 class: info.magnolia.rendering.spa.renderer.SpaRenderableDefinition
 dialog: saas-demo:pages/About
 renderType: spa
