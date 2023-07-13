@@ -6,7 +6,7 @@ const LinksBanner = () => {
     return (
         <div className="links-banner">
             <div>
-                Discuss the topic further
+                Discuss the topic further.
             </div>
             <div className="flex">
                 <i>a</i>
