@@ -5,10 +5,10 @@
 	"scripts": {
 		"get-env": "node get-env.js",
     	"get-env-netlify": "node get-env-netlify.js",
-
 		"dev": "npm run get-env && env-cmd -f .config-env env-cmd -f .env next dev",
-		"build": "next build",
-		"start": "next start",
+		"build": "npm run get-env && env-cmd -f .config-env env-cmd -f .env next build",
+		"build:netlify": "npm run get-env-netlify && CI=false && env-cmd -f .config-env env-cmd -f .env next build",
+		"start": "npm run get-env && env-cmd -f .config-env env-cmd -f .env next start",
 		"lint": "next lint"
 	},
 	"dependencies": {
@@ -24,10 +24,8 @@
 		"react-dom": "18.2.0",
 		"typescript": "5.0.4",
 		"current-git-branch": "^1.1.0"
-
 	},
 	"devDependencies": {
-		
 		"env-cmd": "^10.0.1"
 	}
 }
