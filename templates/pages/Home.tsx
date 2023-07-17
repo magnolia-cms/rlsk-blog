@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import { EditableArea, EditableComponent } from '@magnolia/react-editor';
-import { useEffect } from 'react';
 import Footer from '../components/Footer';
 import Grid from '../components/Grid';
 
@@ -28,7 +27,7 @@ export function renderHomeHeader(props: any) {
 			<nav>
 				<ul className="nav-links">
 					{content['@nodes'].map((nodeName: any) => (
-						<li key={content[nodeName]['@id']}>
+						<li key={content[nodeName]['@name']}>
 							<EditableComponent
 								content={{ ...content[nodeName] }}
 							/>
@@ -41,11 +40,7 @@ export function renderHomeHeader(props: any) {
 }
 
 export default function Home(props: any) {
-	const { main, header, nodes } = props;
-
-	useEffect(() => {
-		sessionStorage.setItem('header', JSON.stringify(header));
-	}, [header]);
+	const { main, header } = props;
 
 	return (
 		<>

@@ -4,26 +4,29 @@
 	"private": true,
 	"scripts": {
 		"get-env": "node get-env.js",
-    	"get-env-netlify": "node get-env-netlify.js",
+		"get-env-netlify": "node get-env-netlify.js",
 		"dev": "npm run get-env && env-cmd -f .config-env env-cmd -f .env next dev",
 		"build": "npm run get-env && env-cmd -f .config-env env-cmd -f .env next build",
 		"build:netlify": "npm run get-env-netlify && CI=false && env-cmd -f .config-env env-cmd -f .env next build",
 		"start": "npm run get-env && env-cmd -f .config-env env-cmd -f .env next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"mgnl-preview": "node node_modules/@magnolia/cli"
 	},
 	"dependencies": {
+		"@magnolia/cli": "^5.0.1-preview",
+		"@magnolia/livesync": "^1.0.0-alpaha-1",
 		"@magnolia/react-editor": "^1.3.3",
 		"@react-google-maps/api": "^2.12.2",
 		"@types/node": "20.1.2",
 		"@types/react": "18.2.6",
 		"@types/react-dom": "18.2.4",
+		"current-git-branch": "^1.1.0",
 		"eslint": "8.40.0",
 		"eslint-config-next": "13.4.1",
 		"next": "13.4.7",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"typescript": "5.0.4",
-		"current-git-branch": "^1.1.0"
+		"typescript": "5.0.4"
 	},
 	"devDependencies": {
 		"env-cmd": "^10.0.1"

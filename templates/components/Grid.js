@@ -17,12 +17,9 @@ function Grid({  isFooter = false }) {
 	const isLastPage = art?.length < 9; // to be replaced when "total" works again
 
 	useEffect(() => {
-		console.log("useEffect")
 			const nodesUrl = getNodesUrl(spaRootNodePath, pageDimension, selectedPage * pageDimension);
 			fetch(nodesUrl).then((res) => {
-				console.log(res)
 				res.json().then(json => {
-					console.log(json)
 					setArt(json.results)
 				});
 			});

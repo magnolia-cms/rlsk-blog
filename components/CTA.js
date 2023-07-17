@@ -1,12 +1,20 @@
 import A from "./A";
+import {
+	spaRootNodePath,
+} from "../utils/api";
 
 function CTA(props) {
-  const { ctaTitle, pageLink, webLink, className } = props;
+  const { ctaTitle, webLink, className } = props;
+  let pageLink;
+
+  if (spaRootNodePath && props.pageLink) {
+    pageLink = props.pageLink["@path"].replace(spaRootNodePath, "");
+      } 
 
   return ctaTitle && (pageLink || webLink) ? (
     <A
       className={className}
-      href={pageLink ? pageLink["@path"] : webLink}
+      href={pageLink ? pageLink : webLink}
       label={ctaTitle}
     />
   ) : null;

@@ -9,6 +9,7 @@ const armata = Armata({ weight: '400',
 subsets: ['latin'], })
 
 function MyApp({ Component, pageProps }) {
+	
 	return (
 		<main className={armata.className}>
 			<Component {...pageProps} />
