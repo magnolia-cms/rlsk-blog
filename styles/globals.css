@@ -202,6 +202,7 @@ nav {
 	color: var(--primary-font-color);
 	text-decoration: none;
 	padding: 5px 10px;
+  text-transform: uppercase;
 }
 
 .nav-links li a:hover {

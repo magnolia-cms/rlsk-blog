@@ -1,12 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import { EditableArea, EditableComponent } from '@magnolia/react-editor';
+import { EditableArea } from '@magnolia/react-editor';
 import Footer from '../components/Footer';
 import Grid from '../components/Grid';
 
 export function renderHomeHeader(props: any) {
 	const { content } = props;
 	const { image } = content;
+
+	const navLinks = [
+		{
+			label: "About",
+			link: "/About-Rasmus",
+		}
+	]
 
 	return (
 		<header className="flex">
@@ -26,11 +33,14 @@ export function renderHomeHeader(props: any) {
 
 			<nav>
 				<ul className="nav-links">
-					{content['@nodes'].map((nodeName: any) => (
-						<li key={content[nodeName]['@name']}>
-							<EditableComponent
+					{navLinks.map(({ link, label }) => (
+						<li key={label}>
+							<a href={link}>
+								{label}
+							</a>
+							{/* <EditableComponent
 								content={{ ...content[nodeName] }}
-							/>
+							/> */}
 						</li>
 					))}
 				</ul>
