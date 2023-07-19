@@ -9,12 +9,12 @@ import Grid from '../components/Grid';
 import LinksBanner from "../../components/LinksBanner";
 
 function Basic(props) {
-  const { title, publish_date, banner_image, main } = props;
-  const [header, setHeader] = useState();
+  const { title, publish_date, banner_image, main, header } = props;
+  // const [header, setHeader] = useState();
 
-  useLayoutEffect(() => {
-    setHeader(JSON.parse(sessionStorage.getItem("header")));
-  }, []);
+  // useLayoutEffect(() => {
+  //   setHeader(JSON.parse(sessionStorage.getItem("header")));
+  // }, []);
 
   return (
     <div className="Basic">

@@ -7,13 +7,13 @@ import Banner from "../components/Banner";
 import Grid from '../components/Grid';
 
 function About(props) {
-  const { title, description, publish_date, banner_image, main, nodes } = props;
+  const { title, description, publish_date, banner_image, main, nodes, header } = props;
   console.log('article props -----------------')
-  const [header, setHeader] = useState();
+  // const [header, setHeader] = useState();
 
-  useLayoutEffect(() => {
-    setHeader(JSON.parse(sessionStorage.getItem("header")));
-  }, []);
+  // useLayoutEffect(() => {
+  //   setHeader(JSON.parse(sessionStorage.getItem("header")));
+  // }, []);
 
   return (
     <div className="Basic">
