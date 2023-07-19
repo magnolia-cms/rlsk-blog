@@ -5,5 +5,3 @@ require("fs").writeFileSync(
   ".config-env",
   `REACT_APP_CONFIG_ENV=environments/${envName}`
 );
-
-console.log("get-env. write: ", envName);
